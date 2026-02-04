@@ -4,5 +4,6 @@ public class Brett {
 
     public int trill() {
         return 1;
+
     }
 }
