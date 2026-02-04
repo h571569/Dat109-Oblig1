@@ -12,6 +12,11 @@ public class Spill {
     }
 
     public void spill() {
+
+        if (antallSpillerer < 2 || antallSpillerer > 4) {
+            throw new IllegalArgumentException();
+        }
+
         Brikke[] brikker = new Brikke[antallSpillerer];
         for (int x = 0; x < antallSpillerer; x++) {
             brikker[x] = new Brikke(0, x+1);
