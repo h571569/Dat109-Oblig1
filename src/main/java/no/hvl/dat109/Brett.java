@@ -8,4 +8,5 @@ public class Brett {
     }
 
     private String id = "Dette skal np funke";
+
 }
