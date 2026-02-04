@@ -1,10 +1,10 @@
 package no.hvl.dat109;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
 
-class BrettTest {
+public class BrettTest {
 
-    @org.junit.jupiter.api.Test
-    void trill() {
+    @Test
+    public void trill() {
     }
 }
