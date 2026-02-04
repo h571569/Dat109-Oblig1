@@ -9,4 +9,8 @@ public class Brett {
 =======
 >>>>>>> Stashed changes
 
+    public int trill() {
+        return 0;
+
+    }
 }
