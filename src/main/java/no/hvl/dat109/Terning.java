@@ -1,8 +1,10 @@
 package no.hvl.dat109;
 
-public class Terning {
+import no.hvl.dat109.grensefjes.TerningFjes;
 
-    public static int trill() {
+public class Terning implements TerningFjes {
+
+    public int trill() {
         return(int)(Math.random() * 6) + 1;
     }
 }
