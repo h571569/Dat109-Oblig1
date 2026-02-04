@@ -7,5 +7,5 @@ public class Brett {
 
     }
 
-    private String navn = "frette";
+    private String id = "Dette skal np funke";
 }
