@@ -6,4 +6,6 @@ public class Brett {
         return 0;
 
     }
+
+    private String navn = "frette";
 }
