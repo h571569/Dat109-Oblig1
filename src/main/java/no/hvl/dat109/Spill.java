@@ -5,14 +5,10 @@ import java.util.Scanner;
 
 public class Spill implements SpillInterface {
     // private Brett brett;
-    private int antallSpillerer;
+    private final int antallSpillerer;
     private boolean vunnet = false;
 
-
-    /**
-     * @Param antallSpillerer må være mellom 2 og 4
-     * */
-    public Spill(final int antallSpillerer) {
+    public Spill(int antallSpillerer) {
         this.antallSpillerer = antallSpillerer;
     }
 
