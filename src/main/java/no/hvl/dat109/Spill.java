@@ -1,23 +1,25 @@
 package no.hvl.dat109;
 
+import no.hvl.dat109.grensefjes.SpillFjes;
 import java.util.Scanner;
 
-public class Spill {
+public class Spill implements SpillFjes {
     // private Brett brett;
-    private final int antallSpillerer;
+    private int antallSpillerer;
     private boolean vunnet = false;
 
     public Spill(final int antallSpillerer) {
         this.antallSpillerer = antallSpillerer;
     }
 
+    @Override
     public void spill() {
 
         if (antallSpillerer < 2 || antallSpillerer > 4) {
             throw new IllegalArgumentException();
         }
 
-        final Brikke[] brikker = new Brikke[antallSpillerer];
+        Brikke[] brikker = new Brikke[antallSpillerer];
         for (int x = 0; x < antallSpillerer; x++) {
             brikker[x] = new Brikke(0, x + 1);
         }
