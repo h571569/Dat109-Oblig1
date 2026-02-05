@@ -1,6 +1,8 @@
 package no.hvl.dat109;
 
-public class Brikke {
+import no.hvl.dat109.grensefjes.BrikkeFjes;
+
+public class Brikke implements BrikkeFjes {
     private int posisjon;
     private int brikkeId;
 
@@ -8,12 +10,15 @@ public class Brikke {
         this.posisjon = posisjon;
         this.brikkeId = brikkeId;
     }
+    @Override
     public int getPosisjon() {
         return posisjon;
     }
+    @Override
     public void setPosisjon(int posisjon) {
         this.posisjon = posisjon;
     }
+
     public int getBrikkeId() {
         return brikkeId;
     }

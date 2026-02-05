@@ -4,5 +4,5 @@ public interface BrikkeFjes {
 
 	  int getPosisjon();
 
-	  int setPosisjon();
+	  void setPosisjon(int posisjon) throws IllegalArgumentException;
 }

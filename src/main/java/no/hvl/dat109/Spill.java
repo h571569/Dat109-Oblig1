@@ -1,6 +1,8 @@
 package no.hvl.dat109;
 
-public class Spill {
+import no.hvl.dat109.grensefjes.SpillFjes;
+
+public class Spill implements SpillFjes {
     // private Brett brett;
     private int antallSpillerer;
     private boolean vunnet = false;
@@ -11,6 +13,7 @@ public class Spill {
         this.antallSpillerer = antallSpillerer;
     }
 
+    @Override
     public void spill() {
 
         if (antallSpillerer < 2 || antallSpillerer > 4) {
