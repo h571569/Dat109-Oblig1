@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class Spill implements SpillFjes {
     // private Brett brett;
-    private int antallSpillerer;
+    private final int antallSpillerer;
     private boolean vunnet = false;
 
-    public Spill(final int antallSpillerer) {
+    public Spill(int antallSpillerer) {
         this.antallSpillerer = antallSpillerer;
     }
 
