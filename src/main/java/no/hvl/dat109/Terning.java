@@ -6,9 +6,7 @@ package no.hvl.dat109;
  * @Author Jonas glambek
  * */
 
-import no.hvl.dat109.interfaces.TerningInterface;
-
-public class Terning implements TerningInterface {
+public class Terning {
 
 
     /**
