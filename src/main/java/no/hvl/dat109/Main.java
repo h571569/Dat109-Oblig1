@@ -1,5 +1,9 @@
 package no.hvl.dat109;
 
+/**
+ * @Author Elias Frette
+ * */
+
 public class Main {
     public static void main(String[] args) {
         Spill s1 = new Spill(3);
