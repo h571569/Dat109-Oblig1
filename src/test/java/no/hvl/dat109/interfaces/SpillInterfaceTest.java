@@ -1,11 +1,11 @@
-package no.hvl.dat109.grensefjes;
+package no.hvl.dat109.interfaces;
 
 import no.hvl.dat109.Spill;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.fail;
 
-public class SpillFjesTest {
+public class SpillInterfaceTest {
 	  Spill s;
 
 	  @Test

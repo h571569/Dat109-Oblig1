@@ -1,10 +1,10 @@
-package no.hvl.dat109.grensefjes;
+package no.hvl.dat109.interfaces;
 
 import junit.framework.TestCase;
 import no.hvl.dat109.Terning;
 import org.junit.jupiter.api.Test;
 
-public class TerningFjesTest extends TestCase {
+public class TerningInterfaceTest extends TestCase {
 
 	  @Test
 	  public void testTrill() {
