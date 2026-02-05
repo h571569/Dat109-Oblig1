@@ -17,7 +17,15 @@ public class Brett {
     public Brett() throws Exception {
 
         Properties props = new Properties();
-        props.load(new FileInputStream("application.properties"));
+        InputStream is = getClass()
+                .getClassLoader()
+                .getResourceAsStream("application.properties");
+
+        if (is == null) {
+            throw new FileNotFoundException("Fant ikke application.properties på classpath");
+        }
+
+        props.load(is);
 
         String url  = props.getProperty("spring.datasource.url");
         String user = props.getProperty("spring.datasource.username");
@@ -50,6 +58,14 @@ public class Brett {
         stmt.close();
 
         return liste.toArray(new int[0][0]);
+    }
+
+    public void test() {
+        for (int[] rad : slange) {
+            for (int n : rad) {
+                System.out.println(n);
+            }
+        }
     }
 
 }
