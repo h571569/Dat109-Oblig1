@@ -13,7 +13,8 @@ public class Brikke implements BrikkeInterface {
     private int brikkeId;
 
     /**
-     * @Param Posisjonen brikken starter på, og brikkeId som er en unik id for hver brikke
+     * @Param Posisjonen brikken starter på
+     * @Param BrikkeId som er en unik id for hver brikke
      * */
     public Brikke(int posisjon, int brikkeId) {
         this.posisjon = posisjon;
@@ -26,6 +27,9 @@ public class Brikke implements BrikkeInterface {
         return posisjon;
     }
 
+    /**
+     * @Param Posisjonen til brikken
+     * */
     public void setPosisjon(int posisjon) {
         this.posisjon = posisjon;
     }
@@ -35,6 +39,9 @@ public class Brikke implements BrikkeInterface {
     public int getBrikkeId() {
         return brikkeId;
     }
+    /**
+     * @Param BrikkeId som er en unik id for hver brikke
+     * */
     public void setBrikkeId(final int brikkeId) {
         this.brikkeId = brikkeId;
     }

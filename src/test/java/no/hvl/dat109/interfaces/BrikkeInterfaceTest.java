@@ -1,20 +1,15 @@
-package no.hvl.dat109.grensefjes;
+package no.hvl.dat109.interfaces;
 
 import no.hvl.dat109.Brikke;
-import no.hvl.dat109.Spill;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;
-import java.util.random.RandomGenerator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
-public class BrikkeFjesTest {
+public class BrikkeInterfaceTest {
 	  Brikke[] brikker;
 	  Random r = new Random();
 

@@ -1,21 +1,25 @@
 package no.hvl.dat109;
 
-import no.hvl.dat109.grensefjes.SpillFjes;
+import no.hvl.dat109.interfaces.SpillInterface;
 
-public class Spill implements SpillFjes {
+public class Spill implements SpillInterface {
     // private Brett brett;
     private int antallSpillerer;
     private boolean vunnet = false;
 
 
-
+    /**
+     * @Param antallSpillerer må være mellom 2 og 4
+     * */
     public Spill(int antallSpillerer) {
         this.antallSpillerer = antallSpillerer;
     }
 
+    /**
+     * @Throw IllegalArgumentException hvis antallSpillerer er mindre enn 2 eller større enn 4
+     * */
     @Override
     public void spill() {
-
         if (antallSpillerer < 2 || antallSpillerer > 4) {
             throw new IllegalArgumentException();
         }
