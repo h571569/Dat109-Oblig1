@@ -1,12 +1,21 @@
 package no.hvl.dat109;
 
-public class Spill {
+/**
+ * @Author Elias Frette
+ *
+ * */
+
+import no.hvl.dat109.interfaces.SpillInterface;
+
+public class Spill implements SpillInterface {
     // private Brett brett;
     private final int antallSpillerer;
     private boolean vunnet = false;
 
-
-
+    /**
+     * @Param antallSpillerer må være mellom 2 og 4
+     * @Throws IllegalArgumentException hvis antallSpillerer er mindre enn 2 eller større enn 4
+     * */
     public Spill(final int antallSpillerer) {
         this.antallSpillerer = antallSpillerer;
     }
@@ -28,7 +37,7 @@ public class Spill {
                 int sum = Terning.trill();
                 if (brikker[i].getPosisjon()+sum < 100) {
                     brikker[i].setPosisjon(brikker[i].getPosisjon()+sum);
-                    System.out.println(brikker[i].getBrikkeId()+ " er på rute "+ brikker[i].getPosisjon()+ " og fikk terningkast: " + sum);
+                    System.out.println("Brikke " + brikker[i].getBrikkeId()+ " er på rute "+ brikker[i].getPosisjon()+ " og fikk terningkast: " + sum);
                 } else if (brikker[i].getPosisjon()+sum == 100) {
                     System.out.println("Brikke: "+ brikker[i].getBrikkeId()+ " Har vunnet!");
                     vunnet = true;
@@ -37,7 +46,6 @@ public class Spill {
                 }
                 sum = 0;
             }
-
         }
     }
 }
