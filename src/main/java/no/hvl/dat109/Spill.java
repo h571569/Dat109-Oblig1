@@ -1,32 +1,26 @@
 package no.hvl.dat109;
 
-/**
- * @Author Elias Frette
- *
- * */
+import no.hvl.dat109.grensefjes.SpillFjes;
 
-import no.hvl.dat109.interfaces.SpillInterface;
-
-public class Spill implements SpillInterface {
+public class Spill implements SpillFjes {
     // private Brett brett;
-    private final int antallSpillerer;
+    private int antallSpillerer;
     private boolean vunnet = false;
 
-    /**
-     * @Param antallSpillerer må være mellom 2 og 4
-     * @Throws IllegalArgumentException hvis antallSpillerer er mindre enn 2 eller større enn 4
-     * */
-    public Spill(final int antallSpillerer) {
+
+
+    public Spill(int antallSpillerer) {
         this.antallSpillerer = antallSpillerer;
     }
 
+    @Override
     public void spill() {
 
         if (antallSpillerer < 2 || antallSpillerer > 4) {
             throw new IllegalArgumentException();
         }
 
-        final Brikke[] brikker = new Brikke[antallSpillerer];
+        Brikke[] brikker = new Brikke[antallSpillerer];
         for (int x = 0; x < antallSpillerer; x++) {
             brikker[x] = new Brikke(0, x+1);
         }
@@ -37,7 +31,7 @@ public class Spill implements SpillInterface {
                 int sum = Terning.trill();
                 if (brikker[i].getPosisjon()+sum < 100) {
                     brikker[i].setPosisjon(brikker[i].getPosisjon()+sum);
-                    System.out.println("Brikke " + brikker[i].getBrikkeId()+ " er på rute "+ brikker[i].getPosisjon()+ " og fikk terningkast: " + sum);
+                    System.out.println(brikker[i].getBrikkeId()+ " er på rute "+ brikker[i].getPosisjon()+ " og fikk terningkast: " + sum);
                 } else if (brikker[i].getPosisjon()+sum == 100) {
                     System.out.println("Brikke: "+ brikker[i].getBrikkeId()+ " Har vunnet!");
                     vunnet = true;
@@ -46,6 +40,7 @@ public class Spill implements SpillInterface {
                 }
                 sum = 0;
             }
+
         }
     }
 }
