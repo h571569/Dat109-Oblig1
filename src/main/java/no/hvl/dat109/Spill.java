@@ -2,12 +2,12 @@ package no.hvl.dat109;
 
 public class Spill {
     // private Brett brett;
-    private int antallSpillerer;
+    private final int antallSpillerer;
     private boolean vunnet = false;
 
 
 
-    public Spill(int antallSpillerer) {
+    public Spill(final int antallSpillerer) {
         this.antallSpillerer = antallSpillerer;
     }
 
@@ -17,7 +17,7 @@ public class Spill {
             throw new IllegalArgumentException();
         }
 
-        Brikke[] brikker = new Brikke[antallSpillerer];
+        final Brikke[] brikker = new Brikke[antallSpillerer];
         for (int x = 0; x < antallSpillerer; x++) {
             brikker[x] = new Brikke(0, x+1);
         }
