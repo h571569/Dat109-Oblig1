@@ -1,9 +1,9 @@
 package no.hvl.dat109;
 
-import no.hvl.dat109.grensefjes.SpillFjes;
+import no.hvl.dat109.interfaces.SpillInterface;
 import java.util.Scanner;
 
-public class Spill implements SpillFjes {
+public class Spill implements SpillInterface {
     // private Brett brett;
     private final int antallSpillerer;
     private boolean vunnet = false;
@@ -12,9 +12,11 @@ public class Spill implements SpillFjes {
         this.antallSpillerer = antallSpillerer;
     }
 
+    /**
+     * @Throw IllegalArgumentException hvis antallSpillerer er mindre enn 2 eller større enn 4
+     * */
     @Override
     public void spill() {
-
         if (antallSpillerer < 2 || antallSpillerer > 4) {
             throw new IllegalArgumentException();
         }
@@ -24,14 +26,16 @@ public class Spill implements SpillFjes {
             brikker[x] = new Brikke(0, x + 1);
         }
 
-        Scanner scanner = new Scanner(System.in); 
+
+        Scanner scanner = new Scanner(System.in);
 
         while (!vunnet) {
+            
             for (int i = 0; i < antallSpillerer && !vunnet; i++) {
 
                 System.out.println("Brikke nr: " + brikker[i].getBrikkeId()
                         + " sin tur. Trykk Enter for å fortsette..");
-                scanner.nextLine(); 
+                scanner.nextLine();
 
                 int sum = Terning.trill();
 
@@ -43,13 +47,13 @@ public class Spill implements SpillFjes {
                 } else if (brikker[i].getPosisjon() + sum == 100) {
                     System.out.println("Brikke: " + brikker[i].getBrikkeId() + " Har vunnet!");
                     vunnet = true;
-
                 } else {
                     System.out.println(brikker[i].getBrikkeId() + " fikk for mye!");
                 }
+                sum = 0;
             }
-        }
 
-        scanner.close(); 
+        }
+        scanner.close();
     }
 }
