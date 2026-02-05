@@ -4,7 +4,7 @@ public class Brikke {
     private int posisjon;
     private int brikkeId;
 
-    public Brikke(int posisjon, int brikkeId) {
+    public Brikke(int posisjon, final int brikkeId) {
         this.posisjon = posisjon;
         this.brikkeId = brikkeId;
     }
@@ -17,7 +17,7 @@ public class Brikke {
     public int getBrikkeId() {
         return brikkeId;
     }
-    public void setBrikkeId(int brikkeId) {
+    public void setBrikkeId(final int brikkeId) {
         this.brikkeId = brikkeId;
     }
 }
