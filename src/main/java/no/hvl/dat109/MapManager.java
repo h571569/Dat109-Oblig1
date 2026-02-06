@@ -3,6 +3,7 @@ package no.hvl.dat109;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class MapManager {
 
@@ -50,11 +51,11 @@ public class MapManager {
     private void getTileImage() {
 
         try {
-            tile[0] = ImageIO.read(getClass().getResourceAsStream("/tiles/normalTile.png"));
-            tile[1] = ImageIO.read(getClass().getResourceAsStream("/tiles/ladderBottom.png"));
-            tile[2] = ImageIO.read(getClass().getResourceAsStream("/tiles/ladderTop.png"));
-            tile[3] = ImageIO.read(getClass().getResourceAsStream("/tiles/snakeTail.png"));
-            tile[4] = ImageIO.read(getClass().getResourceAsStream("/tiles/snakeHead.png"));
+            tile[0] = load("/tiles/normalTile.png");
+            tile[1] = load("/tiles/ladderBottom.png");
+            tile[2] = load("/tiles/ladderTop.png");
+            tile[3] = load("/tiles/snakeTail.png");
+            tile[4] = load("/tiles/snakeHead.png");
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -64,5 +65,13 @@ public class MapManager {
 
     public BufferedImage getTile(int tileNum) {
         return tile[tileNum];
+    }
+
+    private BufferedImage load(String path) throws IOException {
+        var in = getClass().getResourceAsStream(path);
+        if (in == null) {
+            throw new IllegalArgumentException("Fant ikke resource: " + path);
+        }
+        return ImageIO.read(in);
     }
 }
