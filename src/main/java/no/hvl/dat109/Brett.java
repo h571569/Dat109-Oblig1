@@ -40,6 +40,13 @@ public class Brett {
         con.close();
     }
 
+    /**
+     * 
+     * @param con Database innlogging
+     * @param tabell Tabellene fra DB som skal hentes
+     * @return Skriver ut spesial rutenene fra db 
+     * @throws Exception
+     */
     private int[][] hentTabell(Connection con, String tabell) throws Exception {
 
         List<int[]> liste = new ArrayList<>();
