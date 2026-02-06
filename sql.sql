@@ -17,15 +17,15 @@ CREATE TABLE stige (
 SET search_path TO stigespill;
 
 INSERT INTO stige (fra, til) VALUES
-    (3, 22),
-    (8, 26),
-    (20, 38),
-    (36, 57),
-    (63, 81);
+    (1, 21),    
+    (22, 39),    
+    (68, 88),    
+    (36, 56),    
+    (63, 83);    
 
 INSERT INTO slange (fra, til) VALUES
-    (17, 7),
-    (34, 14),
-    (52, 29),
-    (79, 54),
-    (96, 72);
+    (17, 4),    
+    (34, 14),    
+    (52, 29),    
+    (79, 59),   
+    (96, 76);    
