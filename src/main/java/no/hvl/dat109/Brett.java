@@ -18,6 +18,10 @@ public class Brett extends JPanel {
     private Spill spill;
     private int [][] slanger;
     private int [][] stiger;
+    /**
+     * @Param 2 dimensjonal array med slanger
+     * @Param 2 dimensjonal array med stiger
+     * */
 
     public Brett(Spill spill, int [][] slanger,int [][] stiger) throws Exception {
         this.spill = spill;
@@ -40,6 +44,9 @@ public class Brett extends JPanel {
         drawBrikker(g2);
     }
 
+    /**
+     * @Param Trenger Graphics2D fra JPanel
+     * */
     private void drawBrikker(Graphics2D g2) {
 
         Brikke[] brikker = spill.getBrikker();
@@ -65,6 +72,9 @@ public class Brett extends JPanel {
         }
     }
 
+    /**
+     * @Param Trenger Graphics2D fra JPanel
+     * */
     private void drawLaddersAndSnakes(Graphics2D g2) {
 
         for (int[] stige : stiger) {
@@ -91,6 +101,12 @@ public class Brett extends JPanel {
 
 
     }
+
+    /**
+     * @Param Trenger posisjonen til rute
+     * @Param Trenger størrelsen på rute i pixler
+     * @Return kordinater i X,Y på skjermen
+     * */
 
     private Point posToPixel(int pos, int tileSize) {
         if (pos < 1) pos = 1;
