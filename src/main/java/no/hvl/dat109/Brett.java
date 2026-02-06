@@ -3,6 +3,7 @@ package no.hvl.dat109;
 /**
  * @Author Edvar Motrøen
  * @Author Elias Frette
+ * @
  * */
 
 import java.sql.*;
@@ -59,13 +60,4 @@ public class Brett {
 
         return liste.toArray(new int[0][0]);
     }
-
-    public void test() {
-        for (int[] rad : slange) {
-            for (int n : rad) {
-                System.out.println(n);
-            }
-        }
-    }
-
 }

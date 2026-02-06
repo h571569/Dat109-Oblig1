@@ -1,5 +1,14 @@
 package no.hvl.dat109;
 
+/**
+ * @Author Elias Frette
+ * @Author Edvar Motrøen
+ * @Author Jonas glambek
+ * @Author Fredrik Furustør
+ * @Author Domas Gostautas
+ * @Author Gabriel Hugaas 
+ * */
+
 import no.hvl.dat109.interfaces.SpillInterface;
 import java.util.Scanner;
 

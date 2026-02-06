@@ -12,8 +12,6 @@ public class Main {
          * @Param Antall spillere som skal være med i spillet
          * */
         Spill s1 = new Spill(3);
-        // s1.spill();
-        Brett b = new Brett();
-        b.test();
+        s1.spill();
     }
 }
