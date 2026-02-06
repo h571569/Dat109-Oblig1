@@ -3,6 +3,7 @@ package no.hvl.dat109;
 /**
  * @Author Edvar Motrøen
  * @Author Elias Frette
+ * @
  * */
 
 import javax.swing.*;
@@ -123,5 +124,4 @@ public class Brett extends JPanel {
 
         return new Point(screenCol * tileSize, screenRow * tileSize);
     }
-
 }
